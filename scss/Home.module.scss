@@ -1,0 +1,64 @@
+//Colocando algunas variables.
+$base-color:#37d1c2;
+$primary: $base-color;
+$modal-backdrop-opacity: .8;
+$Grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@import "./CardTitle.module.scss";
+@import "./Button.module.scss";
+@include CardTitle();
+@include Button($base-color, #fff, 1.2rem);
+
+.background {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/bg-home.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .opacity {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.2);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.typed {
+    color: #9ffff5;
+}
+
+
+.home__panel {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: -100%;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+
+    animation-name: home__panelAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes home__panelAnimation {
+    0% {
+        left: 0%;
+        background-color: rgba($color: #000000, $alpha: 1);
+    }
+    100% {
+        left: -100%;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+}

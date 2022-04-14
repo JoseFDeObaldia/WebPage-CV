@@ -1,0 +1,42 @@
+$horizontal-lenght: 100px;
+
+.div {
+
+    input {
+        display: none;
+    }
+
+    .div__label {
+        height: $horizontal-lenght*0.32;
+        width: $horizontal-lenght*0.32;
+        margin: $horizontal-lenght*.04;
+        position: relative;
+        display: inline-block;
+        z-index: 90;
+    }
+    .check1 {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        background-color: #ccc;
+        transition: all .4s ease-in-out;
+        border-radius: $horizontal-lenght;
+        z-index: 100;
+    }
+}
+
+.div input { display: none;}
+.div__label::before {
+    position: absolute;
+    content: "";
+    height: $horizontal-lenght*0.5;
+    width: $horizontal-lenght*0.5;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: $horizontal-lenght*0.5;
+}
+
+input:checked + .div__label {
+    background-color: #ff278c;
+}

@@ -1,0 +1,36 @@
+@mixin Button($background, $color, $font_size) {
+
+    .button {
+        font-size: $font_size;
+        color: $color;
+        background-color: $background;
+
+        padding: 0.5em 1em;
+        margin-top: 2rem;
+        font-weight: 500;
+        border: 1px solid $background;
+        border-radius: 0px;
+        transition: background-color 0.5s, color 0.5s;
+        transition-timing-function: ease-in-out;
+
+        &:hover {
+            background-color: $color;
+            color: $background;
+        }
+        &:active {
+            box-shadow: 0px 0px 8px $background;
+            outline: 3px solid $background;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .button {
+            font-size: $font_size*0.8;
+        }
+    }
+    @media (max-width: 576px) {
+        .button {
+            font-size: $font-size*0.6;
+        }
+    }
+}

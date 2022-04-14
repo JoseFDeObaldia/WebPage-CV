@@ -1,0 +1,66 @@
+$base-color: #37d1c2;
+
+.profileCustom {
+    border: none;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0.6rem 0rem;
+    margin-left: 0px;
+
+    &:hover {
+        outline: 1px solid $base-color;
+    }
+
+    .i {
+        background-color: $base-color;
+        color: #fff;
+        margin: 0.4rem;
+        padding: 1em 1em;
+        font-size: 1rem;
+    }
+    .container {
+        padding: 0 0.5rem;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+
+        p, h5 {
+            margin: 0;
+        }
+
+    }
+}
+
+.text {
+    text-align: justify;
+    font-weight: 400;
+    color: #808080;
+}
+
+@media (max-width: 350px) {
+    .card {
+        margin-left: 2rem;
+        .i, .container p, .container h5 {
+            font-size: 0.7rem;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .card {
+        margin-left: 2rem;
+    }
+}
+@media (max-width: 968px) {
+    .container {
+        h5 {font-size: 1rem;}
+        p { font-size: 0.8rem;}
+    }
+    .text {
+        font-size: 16px;
+    }
+}

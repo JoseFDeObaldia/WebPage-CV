@@ -1,0 +1,34 @@
+$font_size: 1.2rem;
+$background: #fff;
+$color: #37d1c2;
+
+.title1__container {
+    display: flex;  
+    width: 100%;
+    margin: 1.5rem 0rem;
+    
+    .title__line {
+        position: relative;
+        top: $font_size * 1.25;
+        margin: 0px;
+        width: calc(50%);
+    }
+    .title__sign {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: $font_size;
+        color: #808080;
+        background-color: $background;
+
+        outline: 2px solid $color;
+        span {
+            margin: $font_size/2 $font_size;
+            padding: 0;
+            white-space: nowrap;
+            font-weight: 700;
+        }
+    }
+}

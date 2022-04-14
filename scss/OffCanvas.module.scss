@@ -1,0 +1,62 @@
+$background: #000;
+$color: #37d1c2;
+$font-size: 1.5rem;
+
+.navbar {
+
+    .navbar__ul {
+        list-style: none;
+
+        li, a {
+            text-decoration: none;
+        }
+
+        .navbar__item {
+            display: inline-block;
+            text-decoration: none;
+            font-size: $font-size*0.7;
+            font-weight: 300;
+            color: #fff;
+            width: 60%;
+            padding: 0.7em;
+
+            &:hover {
+                background-color: $color;
+            }
+        }
+    }
+
+    .active {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        background-color: $color;
+        display: inline-block;
+        font-size: $font-size*0.7;
+        width: 60%;
+        padding: 0.7em;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    .disabled {
+        text-decoration: none;
+        color: #808080;
+        display: inline-block;
+        padding: 0.7em;
+        font-weight: 300;
+        font-size: $font-size*0.7;
+        width: 60%;
+        padding: 1em;
+        cursor: default;
+
+        &:hover {
+            color: #808080;
+        }
+    }
+}
+.signButton {
+    display: none;
+}

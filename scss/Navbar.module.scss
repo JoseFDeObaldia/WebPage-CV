@@ -1,0 +1,76 @@
+$background: #cecece;
+$color: #37d1c2;
+$font-size: 1.5rem;
+
+@import "./SignButton.module.scss";
+@include SignButton();
+
+.navbar {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+
+    .navbar__ul {
+        //width: auto;
+        width: 100%; //para agrandar el menu con el scroll aumentamos el width
+        padding: 0;
+        margin: 0%;
+        background-color: $background;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+
+        li, a {
+            text-decoration: none;
+        }
+
+        .navbar__item {
+            display: inline-block;
+            font-size: 1rem;
+            padding: 1em;
+            transition: background-color 1s;
+            color: #ffffff;
+            
+            &:hover {
+                background-color: $color;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+    .signButton {
+        display: none;
+    }
+}
+.active {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 1em;
+    color: #ffffff;
+    background: $color;
+    font-weight: 500;
+
+    &:hover {
+        color: #fff;
+    }
+}
+.disabled {
+    color: #3a3a3a;
+    font-weight: 300;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 1em;
+    cursor: default;
+
+    &:hover {
+        color: #3a3a3a;
+    }
+}
