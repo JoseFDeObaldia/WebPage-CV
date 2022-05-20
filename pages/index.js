@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Header from '../components/Header';
 import Script from 'next/script'
 
-import { faUser, faLocationDot, faFlag, faEnvelopeOpenText, faCalendar } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faLocationDot, faFlag, faEnvelopeOpenText, faCalendar, faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { faHtml5, faCss3Alt, faSass, faJs, faBootstrap, faGithub, faReact, faNodeJs, faTelegram, faWhatsapp, faLinkedin, faInstagram, faGoogle, } from '@fortawesome/free-brands-svg-icons';
 
 import Home from '../components/Home';
@@ -53,7 +53,10 @@ const sectionSkills = {
      icon: faReact},
     {title: "Node.js",
      text: "Manejo del lenguaje de back-end Node.js. Manejo de paquetes, npm, y archivos JSON.", 
-     icon: faNodeJs}
+     icon: faNodeJs},
+     {title: "Mongo DB",
+     text: "Manejo de la base de dato No-SQL de mongo.", 
+     icon: faDatabase}
   ],
 };
 const sectionContact = {
